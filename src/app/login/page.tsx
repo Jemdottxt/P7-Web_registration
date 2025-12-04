@@ -14,14 +14,14 @@ import { FormEvent } from 'react';
 
 export default function LoginPage() {
 
-    const router = useRouter();
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+  	const router = useRouter();
+  	const [username, setUsername] = useState('');
+  	const [password, setPassword] = useState('');
+  	const [error, setError] = useState('');
 
-    async function handleLogin(e: FormEvent) {
+  	async function handleLogin(e: FormEvent) {
         e.preventDefault();
-  setError('');
+	setError('');
 
     const res = await fetch(`${API_BASE}/login`, {
         method: 'POST',
@@ -36,8 +36,8 @@ export default function LoginPage() {
     }
 
     saveToken(data.accessToken);
-      router.push('/dashboard');
-    }
+    	router.push('/dashboard');
+  	}
 
     return (
 <div className="flex items-center justify-center min-h-screen bg-linear-to-bl from-stone-950 via-gray-900 to-blue-800 p-6">

@@ -1,0 +1,1 @@
+export const API_BASE ="https://nestjs-ocr1.onrender.com/auth";
