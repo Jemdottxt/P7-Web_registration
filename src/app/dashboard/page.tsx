@@ -173,14 +173,14 @@ export default function DashboardHome() {
         <Card className="mb-8 shadow-lg border border-indigo-200">
           <CardContent>
             <h2 className="text-xl font-semibold text-indigo-800 mb-5">
-              {editingId ? "Edit Position" : "Create New To Do"}
+              {editingId ? "Edit Task" : "Create a new task"}
             </h2>
             <form
               onSubmit={handleCreateOrUpdate}
               className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end"
             >
               <Input
-                placeholder="To-Do Title"
+                placeholder="Task Title"
                 value={positionCode}
                 onChange={(e) =>
                   setPositionCode((e.target as HTMLInputElement).value)
@@ -190,7 +190,7 @@ export default function DashboardHome() {
                 maxLength={10}
               />
               <Input
-                placeholder="To-Do Description"
+                placeholder="Task Description"
                 value={positionName}
                 onChange={(e) =>
                   setPositionName((e.target as HTMLInputElement).value)
@@ -223,7 +223,7 @@ export default function DashboardHome() {
 
         <section>
           <h2 className="text-xl font-semibold text-indigo-800 mb-4 flex items-center gap-2">
-            To-Do List{" "}
+            Tasks {" "}
             {loading && (
               <svg
                 className="animate-spin h-5 w-5 text-indigo-600"

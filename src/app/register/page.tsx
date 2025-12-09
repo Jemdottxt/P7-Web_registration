@@ -22,7 +22,7 @@ export default function RegisterPage() {
         e.preventDefault();
         setError('');
 
-        const res = await fetch (`${API_BASE}/register`, {
+        const res = await fetch (`${API_BASE}/auth/register`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password }),
