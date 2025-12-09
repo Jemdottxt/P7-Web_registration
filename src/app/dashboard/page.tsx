@@ -223,7 +223,7 @@ export default function DashboardHome() {
 
         <section>
           <h2 className="text-xl font-semibold text-indigo-800 mb-4 flex items-center gap-2">
-            Positions{" "}
+            To-Do List{" "}
             {loading && (
               <svg
                 className="animate-spin h-5 w-5 text-indigo-600"
